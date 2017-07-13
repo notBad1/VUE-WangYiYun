@@ -1,0 +1,29 @@
+[class^="icon-"], [class*=" icon-"] {
+  font-size: 26px;
+}
+.white{
+  color: #fff;
+}
+.gray1{
+  color: #8B8C8C;
+}
+.gray2{
+  color: #919293;
+}
+.gray3{
+  color: #AAABAC;
+}
+.gray4{
+  color: #797A7B;
+}
+.paleRed{
+  color: #E58983;
+}
+.red{
+  color: #D33A31;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
