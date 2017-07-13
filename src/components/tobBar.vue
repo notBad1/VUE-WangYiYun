@@ -17,7 +17,7 @@
     }
 </script>
 <style>
-  @import "../../static/font-icon/css.css";
+  @import "../assets/css/css.css";
   @import "../../static/font-icon/style.css";
   .tobBar{
     position: fixed;

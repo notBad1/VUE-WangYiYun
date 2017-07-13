@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <tobBar></tobBar>
-    <myMusicType></myMusicType>
+    <myMusic></myMusic>
   </div>
 </template>
 
 <script>
   import tobBar from './components/tobBar.vue'
-  import myMusicType from './components/myMusicType.vue'
+  import myMusic from './components/myMusic.vue'
 
   export default {
     components: {
       'tobBar': tobBar,
-      'myMusicType': myMusicType
+      'myMusic': myMusic
     }
   }
 </script>

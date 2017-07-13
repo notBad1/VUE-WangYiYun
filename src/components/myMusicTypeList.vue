@@ -4,7 +4,7 @@
     <div class="typeBox">
       <div class="type">
         <span class="typeName">{{typeName}}</span>
-        <span class="musicNum gray2">({{Num}})</span>
+        <span class="musicNum">({{Num}})</span>
       </div>
       <i class="icon-Horn red horn"></i>
     </div>
@@ -31,7 +31,7 @@
 
 <style>
   @import "../../static/font-icon/style.css";
-  @import "../../static/font-icon/css.css";
+  @import "../assets/css/css.css";
   .typeList{
     height:50px;
   }
@@ -49,6 +49,7 @@
   }
   .musicNum{
     font-size: 14px;
+    color: #919293;
   }
   .horn{
     font-size: 18px;
