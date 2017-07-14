@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?25n7n0');
-  src:  url('fonts/icomoon.eot?25n7n0#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?25n7n0') format('truetype'),
-    url('fonts/icomoon.woff?25n7n0') format('woff'),
-    url('fonts/icomoon.svg?25n7n0#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?idx4cz');
+  src:  url('fonts/icomoon.eot?idx4cz#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?idx4cz') format('truetype'),
+    url('fonts/icomoon.woff?idx4cz') format('woff'),
+    url('fonts/icomoon.svg?idx4cz#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Add1:before {
+  content: "\e930";
+}
+.icon-SongSheet:before {
+  content: "\e931";
+}
+.icon-Delete1:before {
+  content: "\e932";
+}
+.icon-Add2:before {
+  content: "\e933";
+}
+.icon-Link:before {
+  content: "\e934";
+}
+.icon-Delete2:before {
+  content: "\e935";
+}
+.icon-PlayList:before {
+  content: "\e926";
+}
+.icon-Play3:before {
+  content: "\e92f";
+}
 .icon-DownArrow:before {
   content: "\e92d";
 }
@@ -128,9 +152,6 @@
 }
 .icon-Descending:before {
   content: "\e925";
-}
-.icon-List1:before {
-  content: "\e926";
 }
 .icon-Me1:before {
   content: "\e927";

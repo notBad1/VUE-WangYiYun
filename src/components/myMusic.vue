@@ -1,27 +1,29 @@
 <template>
-    <div class="Mymusic">
-        <myMusicTypeList typeName="本地音乐" icon="icon-Music" Num="5"></myMusicTypeList>
-        <myMusicTypeList typeName="最近播放" icon="icon-RecentlyPlayed" Num="5"></myMusicTypeList>
-        <myMusicTypeList typeName="下载管理" icon="icon-Download" Num="5"></myMusicTypeList>
-        <myMusicTypeList typeName="我的电台" icon="icon-MusicRadio" Num="5"></myMusicTypeList>
-        <myMusicTypeList typeName="我的收藏" icon="icon-Collection" Num="专辑/歌手/MV/专栏"></myMusicTypeList>
+    <div class="mymusic">
+        <typeList name="本地音乐" icon="icon-Music" count="5"></typeList>
+        <typeList name="最近播放" icon="icon-RecentlyPlayed" count="5"></typeList>
+        <typeList name="下载管理" icon="icon-Download" count="5"></typeList>
+        <typeList name="我的电台" icon="icon-MusicRadio" count="5"></typeList>
+        <typeList name="我的收藏" icon="icon-Collection" count="专辑/歌手/MV/专栏"></typeList>
 
         <songSheet></songSheet>
     </div>
 </template>
 <script>
 //  我的音乐类型
-  import myMusicTypeList from './myMusicTypeList.vue'
+  import typeList from './typeList.vue'
+//  歌单
   import songSheet from './songSheet.vue'
+
   export default {
     components: {
-      'myMusicTypeList': myMusicTypeList,
+      'typeList': typeList,
       'songSheet': songSheet
     }
   }
 </script>
 <style>
-  .Mymusic{
+  .mymusic{
     margin-top: 50px;
   }
 </style>

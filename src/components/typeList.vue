@@ -3,8 +3,8 @@
     <i v-bind:class="icon" class="typeIcon red"></i>
     <div class="typeBox">
       <div class="type">
-        <span class="typeName">{{typeName}}</span>
-        <span class="musicNum">({{Num}})</span>
+        <span>{{name}}</span>
+        <span class="typeCount">({{count}})</span>
       </div>
       <i class="icon-Horn red horn"></i>
     </div>
@@ -15,13 +15,13 @@
 //  我的音乐类型列表
   export default {
     props: {
-      typeName: {
+      name: {
         type: String
       },
       icon: {
         type: String
       },
-      Num: {
+      count: {
         type: String
       }
     }
@@ -34,6 +34,7 @@
   @import "../assets/css/css.css";
   .typeList{
     height:50px;
+    background-color: #fff;
   }
   .typeIcon{
     padding: 0 15px;
@@ -47,12 +48,13 @@
     height: 100%;
     border-bottom: 1px solid #E6E8E9;
   }
-  .musicNum{
-    font-size: 14px;
+  .typeCount{
+    font-size: 12px;
     color: #919293;
   }
   .horn{
     font-size: 18px;
     padding-right: 15px;
+    display: none;
   }
 </style>
