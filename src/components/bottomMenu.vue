@@ -9,7 +9,7 @@
       </transition>
 
       <transition name="fade">
-        <div class="mask" v-show="showMenu"></div>
+        <div class="mask" v-show="showMenu" v-on:click="toggleMenu"></div>
       </transition>
     </div>
 </template>
@@ -27,7 +27,7 @@
       },
       methods: {
         toggleMenu () {
-          console.log(this)
+          this.showMenu = !this.showMenu
         }
       }
     }
@@ -42,36 +42,12 @@
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 100;
+    z-index: 80;
     padding-bottom: 10px;
   }
   .bottomMenu-title{
     padding: 10px;
     font-size: 14px;
     color: #616161;
-  }
-  .sideUp-enter-to, .sideUp-leave-to{
-    transition: all 0.3s
-  }
-  .sideUp-enter, .sideUp-leave-to{
-    transform:translate3d(0,100%,0)
-  }
-  .fade-enter-active, .fade-leave-active {
-    transition: all 0.3s
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0
-  }
-
-
-  /*遮罩层*/
-  .mask{
-    position: fixed;
-    top:0;
-    bottom: 0;
-    left:0;
-    right: 0;
-    background-color: rgba(0,0,0,.5);
-    z-index: 50;
   }
 </style>

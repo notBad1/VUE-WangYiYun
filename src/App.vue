@@ -32,7 +32,10 @@
     user-select:none;
     -webkit-tap-highlight-color: transparent;
   }
-
+  *{
+    margin:0;
+    padding: 0;
+  }
   #app {
     font-family: '微软雅黑',Arial;
     -webkit-font-smoothing: antialiased;

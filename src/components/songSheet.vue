@@ -11,11 +11,13 @@
       <div v-show="showSheets">
         <div class="body flex">
           <img class="sheetImg" src="../assets/image/003.jpg" alt="">
-          <div class="detail">
-            <span class="name">我喜欢的音乐</span>
-            <span class="count">2首</span>
+          <div class="list-wrapper">
+            <div class="detail">
+              <span class="name">我喜欢的音乐</span>
+              <span class="count">2首</span>
+            </div>
+            <i class="icon-List2 sheetoption"></i>
           </div>
-          <i class="icon-List2 sheetList"></i>
         </div>
       </div>
       <bottomMenu v-show="showMenu"></bottomMenu>
@@ -74,25 +76,12 @@
   /*身体 */
   .body{
     height: 60px;
-    justify-content: flex-start;
     background-color: #F2F4F5;
-    position: relative;
-    padding: 0 15px 0 5px;
   }
-  .body:after{
-    position: absolute;
-    bottom: 0;
-    content: "";
-    background-color: #DADCDD;
-    height: 1px;
-    right:0;
-    left:65px;
-  }
-
   .sheetImg{
     width:50px;
     height: 50px;
-    margin-right: 10px;
+    padding: 0 10px;
   }
   .count{
     display: block;
@@ -100,8 +89,9 @@
     color: #797A7B;
     margin-top: 5px;
   }
-  .sheetList{
+  .sheetoption{
     font-size: 16px;
     color: #AAABAC;
+    padding-right: 15px;
   }
 </style>

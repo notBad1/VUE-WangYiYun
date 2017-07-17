@@ -1,7 +1,7 @@
 <template>
   <div class="typeList flex">
     <i v-bind:class="icon" class="typeIcon red"></i>
-    <div class="typeBox">
+    <div class="list-wrapper">
       <div class="type">
         <span>{{name}}</span>
         <span class="typeCount">({{count}})</span>
@@ -40,14 +40,7 @@
     padding: 0 15px;
     font-size: 22px;
   }
-  .typeBox{
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    border-bottom: 1px solid #E6E8E9;
-  }
+
   .typeCount{
     font-size: 12px;
     color: #919293;

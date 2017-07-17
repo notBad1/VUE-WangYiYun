@@ -28,6 +28,7 @@
     background-color: #fff;
     padding: 0 15px 0 5px;
     justify-content: space-around;
+    z-index: 1;
   }
   .musicImg{
     width:40px;

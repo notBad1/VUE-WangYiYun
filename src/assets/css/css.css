@@ -12,6 +12,37 @@
 }
 .flex{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+/*列表*/
+.list-wrapper{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 1px solid #DADCDD;
+}
+/*遮罩层*/
+.mask{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background-color: rgba(0,0,0,.2);
+  z-index: 50;
+}
+/*动画效果*/
+.sideUp-enter-to, .sideUp-leave-to{
+  transition: all 0.3s
+}
+.sideUp-enter, .sideUp-leave-to{
+  transform:translate3d(0,100%,0)
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.3s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
 }
