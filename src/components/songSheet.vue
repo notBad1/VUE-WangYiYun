@@ -2,7 +2,7 @@
     <div class="songSheet">
       <div class="title flex" v-on:click="toggleSheets">
         <i class="icon-DownArrow arrow" ref="toggleicon"></i>
-        <div class="detail">
+        <div class="flex1">
           <span>创建的歌单</span>
           <span>(1)</span>
         </div>
@@ -12,7 +12,7 @@
         <div class="body flex">
           <img class="sheetImg" src="../assets/image/003.jpg" alt="">
           <div class="list-wrapper">
-            <div class="detail">
+            <div class="flex1">
               <span class="name">我喜欢的音乐</span>
               <span class="count">2首</span>
             </div>
@@ -65,9 +65,6 @@
   .arrow{
     font-size: 15px;
     margin-right: 15px;
-  }
-  .detail{
-    flex: 1;
   }
   .setting{
     font-size: 20px;

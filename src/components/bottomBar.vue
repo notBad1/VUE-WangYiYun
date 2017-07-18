@@ -1,18 +1,39 @@
 <template>
     <div class="bottomBar flex">
       <img class="musicImg" src="../assets/image/006.jpg" alt="">
-      <div class="detail">
+      <div class="flex1">
         <span>刚好遇见你</span>
         <span class="singer">李玉刚</span>
         <span class="prompt">横滑可以切换上下首哦</span>
       </div>
       <i class="icon-Play3 play"></i>
-      <i class="icon-PlayList"></i>
+      <i class="icon-PlayList" v-on:click="toggleSong"></i>
+      <!--遮罩层-->
+      <div v-show="showSong" class="mask" v-on:click = "hiddenSong"></div>
+      <!--歌曲列表-->
+      <Song v-show="showSong" ></Song>
     </div>
 </template>
 <script>
+    import Song from './song.vue'
+
     export default {
-//        props: []
+      data () {
+        return {
+          showSong: false
+        }
+      },
+      methods: {
+        toggleSong () {
+          this.showSong = !this.showSong
+        },
+        hiddenSong () {
+          this.showSong = false
+        }
+      },
+      components: {
+        'Song': Song
+      }
     }
 </script>
 <style>
