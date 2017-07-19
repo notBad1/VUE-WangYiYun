@@ -1,8 +1,15 @@
 <template>
   <div id="app">
+    <!--头部-->
     <tobBar></tobBar>
+    <!--侧边栏-->
+    <leftSidebar v-bind:info='info'></leftSidebar>
+    <!--我的音乐-->
     <myMusic></myMusic>
+    <!--底部-->
     <bootomBar></bootomBar>
+    <!--底部菜单-->
+    <bottomMenu></bottomMenu>
   </div>
 </template>
 
@@ -13,12 +20,27 @@
   import myMusic from './components/myMusic.vue'
 //  底部播放器
   import bootomBar from './components/bottomBar.vue'
-
+//  侧边栏
+  import leftSidebar from './components/leftSidebar.vue'
+// 底部菜单
+  import bottomMenu from './components/bottomMenu.vue'
   export default {
+    data () {
+      return {
+        info: {
+          srcBg: '../../static/img/003.jpg',
+          src: '../../static/img/005.jpeg',
+          name: '各种纠结',
+          grade: '2'
+        }
+      }
+    },
     components: {
       'tobBar': tobBar,
       'myMusic': myMusic,
-      'bootomBar': bootomBar
+      'bootomBar': bootomBar,
+      'leftSidebar': leftSidebar,
+      'bottomMenu': bottomMenu
     }
   }
 </script>

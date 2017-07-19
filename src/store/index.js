@@ -5,15 +5,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import Sidebar from './modules/sideBar'
+import BottomMenu from './modules/bottomMenus'
+
 Vue.use(Vuex)
 
-// const store = new Vuex.Store({
-//  state : {
-//    count : 0
-//  },
-//  mutations : {
-//    increment(state){
-//      state.count++
-//    }
-//  }
-// });
+const store = new Vuex.Store({
+  modules: {
+    sideBar: Sidebar,
+    bottomMenu: BottomMenu
+  }
+})
+
+export default store

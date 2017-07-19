@@ -1,7 +1,7 @@
 <template>
     <div class="bottomMenu">
       <transition  name="sideUp">
-        <div class="bottomMenu-box" v-show="showMenu">
+        <div class="bottomMenu-box" v-show="isShowBottomMenus">
           <p class="bottomMenu-title">创建的歌单</p>
           <typeList name="创建新的歌单" icon="icon-Add1"></typeList>
           <typeList name="歌单管理" icon="icon-SongSheet"></typeList>
@@ -9,25 +9,35 @@
       </transition>
 
       <transition name="fade">
-        <div class="mask" v-show="showMenu" v-on:click="toggleMenu"></div>
+        <div class="mask" v-show="isShowBottomMenus" v-on:click="hiddenBottomMenu"></div>
       </transition>
     </div>
 </template>
 <script>
     import typeList from './typeList.vue'
+    import store from '../store'
 
     export default {
-      data () {
-        return {
-          showMenu: true
-        }
-      },
+//      data () {
+//        return {
+//          showMenu: true
+//        }
+//      },
       components: {
         'typeList': typeList
       },
       methods: {
-        toggleMenu () {
-          this.showMenu = !this.showMenu
+//        隐藏
+        hiddenBottomMenu () {
+          store.dispatch({
+            type: 'hideBottomMenus'
+          })
+        }
+      },
+      computed: {
+        // 显示
+        isShowBottomMenus () {
+          return store.state.bottomMenu.isShowBottomMenu
         }
       }
     }

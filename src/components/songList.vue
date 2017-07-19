@@ -1,19 +1,39 @@
 <template>
     <div class="songList flex">
-      <div class="flex" v-bind:class="{song-selected:showHorn}">
-        <i v-show="showHorn" class="icon-Horn songList-horn"></i>
+      <div class="flex" v-bind:class="songSelected">
+        <i v-show="showIcon" class="icon-Horn songList-horn"></i>
         <span class="songName">{{songName}}</span>
         <span class="song-singer"> - {{songSinger}}</span>
       </div>
       <div class="flex">
-        <i v-show="showLink" class="icon-Link songList-link"></i>
+        <i v-show="showIcon" class="icon-Link songList-link"></i>
         <i class="icon-Delete2 songList-delete"></i>
       </div>
     </div>
 </template>
 <script>
     export default {
-//        props: []
+      props: {
+        songName: {
+          type: String
+        },
+        songSinger: {
+          type: String
+        },
+        songSelected: {
+          type: String
+        }
+      },
+      data () {
+        return {
+
+        }
+      },
+      computed: {
+        showIcon () {
+          return this.songSelected.length
+        }
+      }
     }
 </script>
 <style>

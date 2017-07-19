@@ -1,22 +1,23 @@
 <template>
-  <div class="leftSidebar" v-show="showSidebar">
+  <div class="leftSidebar">
     <transition name="fade">
-      <div class="mask" v-on:click="hiddenSidebar"></div>
+      <div class="mask" v-show="isShowSidebar" v-on:click="hideMenu"></div>
     </transition>
 
-    <transition name="side">
-      <div class="sidebar">
+    <transition name="sideUp">
+      <div class="sidebar" v-show="isShowSidebar">
         <div class="sidebar-wrapper">
           <div class="sidebar-header">
-            <img class="head" src="../assets/image/005.jpeg" alt="头像">
+            <img class="head-bg" v-bind:src="info.srcBg">
+            <img class="head" v-bind:src='info.src' alt="头像">
             <div class="userinfo flex">
               <div class="user">
-                <span>各种纠结</span>
-                <span class="grade">Lv.1</span>
+                <span>{{info.name}}</span>
+                <span class="grade">Lv.{{info.grade}}</span>
               </div>
-              <div class="sign">
-                <i class="icon-Sign"></i>
-                <span>签到</span>
+              <div class="sign" v-on:click="signClick">
+                <i class="icon-Sign" v-show="showSignIcon"></i>
+                <span>{{sign}}</span>
               </div>
             </div>
           </div>
@@ -57,18 +58,45 @@
 </template>
 <script>
     import sidebarList from './sidebarList.vue'
-    export default {
-      data () {
-        return {
-          showSidebar: true
+    import store from '../store'
+
+export default {
+      props: {
+        info: {
+          type: Object
         }
       },
+//      数据
+      data () {
+        return {
+          sign: '签到',
+          showSignIcon: true
+        }
+      },
+//      组件
       components: {
         'sidebarList': sidebarList
       },
+//      方法
       methods: {
-        hiddenSidebar () {
-          this.showSidebar = !this.showSidebar
+//        隐藏菜单
+        hideMenu () {
+          store.dispatch({
+            type: 'hideSideBar'
+          })
+        },
+//        点击签到
+        signClick () {
+          this.sign = '已签到'
+          this.showSignIcon = false
+        }
+
+      },
+//      计算属性
+      computed: {
+        // 显示
+        isShowSidebar () {
+          return store.state.sideBar.isShow
         }
       }
     }
@@ -82,16 +110,27 @@
     top:0;
     bottom: 0;
     overflow-y: auto;
-    width:298px;
+    width:286px;
     background-color: #fff;
     z-index: 100;
+    /*过渡*/
+    transfrom:translateX(0)
   }
   .sidebar-header{
     position: relative;
     width:100%;
     height:168px;
-    background: url("../assets/image/007.jpg") no-repeat center;
     background-size:100%;
+  }
+  .head-bg{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
   }
   .head{
     position: absolute;
@@ -100,6 +139,7 @@
     width:56px;
     height: 56px;
     border-radius: 28px;
+    z-index: 100;
   }
   .userinfo{
     position: absolute;
@@ -109,6 +149,7 @@
     height: 20px;
     font-size: 16px;
     color: #fff;
+    z-index: 100;
   }
   .user{
     display: flex;
@@ -150,7 +191,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width:268px;
+    width:256px;
     height:40px;
     border-top: 1px solid #D9D9D9;
     background-color: #fff;
@@ -165,5 +206,13 @@
   .foot-box{
     display: flex;
     align-items: center;
+  }
+
+  /*滑动效果*/
+  .sideUp-enter-to, .sideUp-leave-to{
+    transition: all .2s
+  }
+  .sideUp-enter, .sideUp-leave-to{
+    transform:translateX(-286px)
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="bottomBar flex">
-      <img class="musicImg" src="../assets/image/006.jpg" alt="">
+      <img class="musicImg" src="../../static/img/006.jpg" alt="">
       <div class="flex1">
         <span>刚好遇见你</span>
         <span class="singer">李玉刚</span>
@@ -9,7 +9,9 @@
       <i class="icon-Play3 play"></i>
       <i class="icon-PlayList" v-on:click="toggleSong"></i>
       <!--遮罩层-->
-      <div v-show="showSong" class="mask" v-on:click = "hiddenSong"></div>
+      <transition name="fade">
+        <div v-show="showSong" class="mask" v-on:click = "hiddenSong"></div>
+      </transition>
       <!--歌曲列表-->
       <Song v-show="showSong" ></Song>
     </div>

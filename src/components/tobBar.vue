@@ -1,7 +1,7 @@
 <template>
     <div class="tobBar">
       <div class="tobBar-warpper flex">
-        <i class="icon-List3 white" v-on:click="toggleSidebar"></i>
+        <i class="icon-List3 white" v-on:click="showMueu"></i>
         <div class="centerMenu">
           <i class="icon-Music white"></i>
           <i class="icon-Wangyiyun paleRed"></i>
@@ -9,25 +9,18 @@
         </div>
         <i class="icon-Search white"></i>
       </div>
-      <!--侧边栏-->
-      <leftSidebar v-show="showSidebar"></leftSidebar>
     </div>
 </template>
 <script>
-    import leftSidebar from './leftSidebar.vue'
+    import store from '../store'
 
     export default {
-      data () {
-        return {
-          showSidebar: false
-        }
-      },
-      components: {
-        'leftSidebar': leftSidebar
-      },
       methods: {
-        toggleSidebar () {
-          this.showSidebar = !this.showSidebar
+//        显示侧边栏
+        showMueu () {
+          store.dispatch({
+            type: 'showSideBar'
+          })
         }
       }
     }

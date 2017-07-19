@@ -1,28 +1,29 @@
 <template>
-    <div class="song">
-      <div class="song-title flex ">
-        <div class="flex">
-          <i class="icon-Loop2 song-icon"></i>
-          <span> 列表循环</span>
-          <span class="songNum"> ( 5 )</span>
-        </div>
-        <div class="song-titleFun">
+  <transition name="side">
+      <div class="song">
+        <div class="song-title flex ">
           <div class="flex">
-            <i class="icon-Add2 song-icon"></i>
-            <span>收藏</span>
+            <i class="icon-Loop2 song-icon"></i>
+            <span> 列表循环</span>
+            <span class="songNum"> ( 5 )</span>
           </div>
-          <div class="line"></div>
-          <div class="flex">
-            <i class="icon-Delete1 song-icon"></i>
-            <span>清空</span>
+          <div class="song-titleFun">
+            <div class="flex">
+              <i class="icon-Add2 song-icon"></i>
+              <span>收藏</span>
+            </div>
+            <div class="line"></div>
+            <div class="flex">
+              <i class="icon-Delete1 song-icon"></i>
+              <span>清空</span>
+            </div>
           </div>
         </div>
+        <songList songName="刚好遇见你" songSinger="李玉刚" songSelected="song-selected"></songList>
+        <songList songName="刚好遇见你" songSinger="李玉刚" songSelected=""></songList>
+        <songList songName="刚好遇见你" songSinger="李玉刚" songSelected=""></songList>
       </div>
-      <songList></songList>
-      <songList></songList>
-      <songList></songList>
-      <songList></songList>
-    </div>
+  </transition>
 </template>
 <script>
     import songList from './songList.vue'

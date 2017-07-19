@@ -6,11 +6,11 @@
           <span>创建的歌单</span>
           <span>(1)</span>
         </div>
-        <i class="icon-Set setting" v-on:click.stop="toggleMenu"></i>
+        <i class="icon-Set setting" v-on:click.stop="showBottomMenus"></i>
       </div>
       <div v-show="showSheets">
         <div class="body flex">
-          <img class="sheetImg" src="../assets/image/003.jpg" alt="">
+          <img class="sheetImg" src="../../static/img/003.jpg" alt="">
           <div class="list-wrapper">
             <div class="flex1">
               <span class="name">我喜欢的音乐</span>
@@ -20,11 +20,10 @@
           </div>
         </div>
       </div>
-      <bottomMenu v-show="showMenu"></bottomMenu>
     </div>
 </template>
 <script>
-    import bottomMenu from './bottomMenu.vue'
+    import store from '../store'
 
     export default {
       data () {
@@ -40,13 +39,12 @@
           this.$refs.toggleicon.style.transform = this.showSheets ? 'rotate(-90deg)' : 'rotate(0)'
           this.showSheets = !this.showSheets
         },
-        toggleMenu () {
-          console.log(this)
-          this.showMenu = !this.showMenu
+//        显示底部设置菜单
+        showBottomMenus () {
+          store.dispatch({
+            type: 'showBottomMenus'
+          })
         }
-      },
-      components: {
-        'bottomMenu': bottomMenu
       }
     }
 </script>

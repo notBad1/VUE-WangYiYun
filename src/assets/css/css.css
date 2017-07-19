@@ -37,15 +37,11 @@
   background-color: rgba(0,0,0,.2);
   z-index: 50;
 }
+
+
 /*动画效果*/
-.sideUp-enter-to, .sideUp-leave-to{
-  transition: all 0.3s
-}
-.sideUp-enter, .sideUp-leave-to{
-  transform:translate3d(0,100%,0)
-}
 .fade-enter-active, .fade-leave-active {
-  transition: all 0.3s
+  transition: all .5s
 }
 .fade-enter, .fade-leave-to {
   opacity: 0
