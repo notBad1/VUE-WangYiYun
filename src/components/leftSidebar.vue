@@ -6,22 +6,26 @@
 
     <transition name="sideUp">
       <div class="sidebar" v-show="isShowSidebar">
-        <div class="sidebar-wrapper">
-          <div class="sidebar-header">
-            <img class="head-bg" v-bind:src="info.srcBg">
-            <img class="head" v-bind:src='info.src' alt="头像">
-            <div class="userinfo flex">
+        <div class="sidebar-header">
+            <img class="head-bg" v-bind:src="user.srcBg">
+            <img v-show="showUser" class="head" v-bind:src='user.src' alt="头像">
+            <div v-show="showUser" class="userinfo flex">
               <div class="user">
-                <span>{{info.name}}</span>
-                <span class="grade">Lv.{{info.grade}}</span>
+                <span>{{user.name}}</span>
+                <span class="grade">Lv.{{user.grade}}</span>
               </div>
               <div class="sign" v-on:click="signClick">
                 <i class="icon-Sign" v-show="showSignIcon"></i>
                 <span>{{sign}}</span>
               </div>
             </div>
+            <div class="signIn-box" v-show='!showUser'>
+              <p>登录网易云音乐</p>
+              <p>320k高音质无限下载，手机电脑多端同步</p>
+              <div class="signIn">立即登录</div>
+            </div>
           </div>
-          <div class="siderbar-list">
+        <div class="siderbar-list">
             <sidebarList iconClass="icon-Message3" sidebarName="我的消息" sidebarDisc="1" discBg="discBg"></sidebarList>
             <sidebarList iconClass="icon-Member" sidebarName="会员中心" sidebarDisc="" discBg=""></sidebarList>
             <sidebarList iconClass="icon-ShoppingCart" sidebarName="商城" sidebarDisc="" discBg=""></sidebarList>
@@ -37,7 +41,6 @@
             <sidebarList iconClass="icon-Drive" sidebarName="驾驶模式" sidebarDisc="" discBg=""></sidebarList>
             <sidebarList iconClass="icon-Cloud" sidebarName="音乐云盘" sidebarDisc="" discBg=""></sidebarList>
           </div>
-        </div>
         <div class="sidebar-fotter flex">
           <div class="foot-box">
             <i class="icon-NightMode foot-icon"></i>
@@ -61,11 +64,6 @@
     import store from '../store'
 
 export default {
-      props: {
-        info: {
-          type: Object
-        }
-      },
 //      数据
       data () {
         return {
@@ -97,6 +95,13 @@ export default {
         // 显示
         isShowSidebar () {
           return store.state.sideBar.isShow
+        },
+        // 用户
+        user () {
+          return this.$store.getters.getUser
+        },
+        showUser () {
+          return this.user.name.length
         }
       }
     }
@@ -114,7 +119,7 @@ export default {
     background-color: #fff;
     z-index: 100;
     /*过渡*/
-    transfrom:translateX(0)
+    transform:translate3d(0,0,0)
   }
   .sidebar-header{
     position: relative;
@@ -140,6 +145,28 @@ export default {
     height: 56px;
     border-radius: 28px;
     z-index: 100;
+  }
+  .signIn-box{
+    position: absolute;
+    top:50px;
+    left:0;
+    right:0;
+    text-align: center;
+    color: #C8C8C9;
+    font-size: 13px;
+    z-index: 100;
+  }
+  .signIn-box p{
+    margin-bottom: 5px;
+  }
+  .signIn{
+    display: inline-block;
+    padding: 5px 35px;
+    border:1px solid #68686A;
+    border-radius: 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #fff;
   }
   .userinfo{
     position: absolute;
@@ -197,6 +224,7 @@ export default {
     background-color: #fff;
     padding: 0 15px;
     font-size: 14px;
+    z-index: 100;
   }
   .foot-icon{
     font-size: 22px;
@@ -207,12 +235,11 @@ export default {
     display: flex;
     align-items: center;
   }
-
-  /*滑动效果*/
-  .sideUp-enter-to, .sideUp-leave-to{
-    transition: all .2s
+  /*动画*/
+  .sidebar.sideUp-enter-to, .sidebar.sideUp-leave-to{
+    transition: all .3s
   }
-  .sideUp-enter, .sideUp-leave-to{
-    transform:translateX(-286px)
+  .sidebar.sideUp-enter, .sidebar.sideUp-leave-to{
+    transform:translate3d(-100%,0,0)
   }
 </style>

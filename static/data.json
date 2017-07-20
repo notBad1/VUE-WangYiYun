@@ -1,9 +1,5 @@
 {
-    "user": {
-        "name": "未曾遗忘的青春",
-        "avatar": "../../static/images/userlogo.jpg",
-        "grade": "9"
-    },
+//  音乐
     "music": {
     	"all":[
     		{
@@ -13,7 +9,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E6%88%91%E8%BF%98%E6%83%B3%E5%A5%B9.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0,%E8%94%A1%E5%8D%93%E5%A6%8D%20-%20%E5%B0%8F%E9%85%92%E7%AA%9D.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "109",
@@ -22,7 +18,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E5%A5%B9%E8%AF%B4.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E4%B8%80%E5%8D%83%E5%B9%B4%E4%BB%A5%E5%90%8E.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "107",
@@ -31,7 +27,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%BE%88%E5%86%92%E9%99%A9%E7%9A%84%E6%A2%A6.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E9%82%A3%E4%BA%9B%E4%BD%A0%E5%BE%88%E5%86%92%E9%99%A9%E7%9A%84%E6%A2%A6.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "106",
@@ -40,7 +36,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E5%8F%AF%E6%83%9C%E6%B2%A1%E6%9C%89%E5%A6%82%E6%9E%9C.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E5%8F%AF%E6%83%9C%E6%B2%A1%E5%A6%82%E6%9E%9C.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "105",
@@ -49,7 +45,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E5%A5%B9%E8%AF%B4.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E5%A5%B9%E8%AF%B4.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "104",
@@ -58,7 +54,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E4%BF%AE%E7%82%BC%E7%88%B1%E6%83%85.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E4%BF%AE%E7%82%BC%E7%88%B1%E6%83%85.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "103",
@@ -67,7 +63,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E5%A5%B9%E8%AF%B4.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E5%BD%93%E4%BD%A0.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "101",
@@ -85,7 +81,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E6%88%91%E8%BF%98%E6%83%B3%E5%A5%B9.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E7%88%B1%E7%AC%91%E7%9A%84%E7%9C%BC%E7%9D%9B.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "98",
@@ -94,7 +90,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E6%B1%9F%E5%8D%97.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E6%B1%9F%E5%8D%97.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "97",
@@ -103,7 +99,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_%E6%88%91%E8%BF%98%E6%83%B3%E5%A5%B9.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E6%9E%97%E4%BF%8A%E6%9D%B0%20-%20%E6%88%91%E8%BF%98%E6%83%B3%E5%A5%B9.mp3",
 		        "type": "华语 林俊杰",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "96",
@@ -112,7 +108,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_faded-1.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/LaRry%C2%A0Rong%20-%20Fade%EF%BC%88LaRry%20Rong%20Remix%EF%BC%89.mp3",
 		        "type": "纯音乐 电音",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "95",
@@ -121,7 +117,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_qingnianwanbao.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E8%AE%B8%E5%B5%A9%20-%20%E6%9C%80%E4%BD%B3%E6%AD%8C%E6%89%8B.mp3",
 		        "type": "华语 许嵩",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "91",
@@ -130,7 +126,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_Falling.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/AndyM%20-%20Falling.mp3",
 		        "type": "纯音乐 电音",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "89",
@@ -139,7 +135,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_memories.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/Sappheiros%20-%20Memories.mp3",
 		        "type": "纯音乐",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "88",
@@ -148,7 +144,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_far%20away.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/Yinyues%20-%20Far%20Away.mp3",
 		        "type": "纯音乐",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "87",
@@ -157,7 +153,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_chinaO.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/%E5%BE%90%E6%A2%A6%E5%9C%86%20-%20China-O.mp3",
 		        "type": "纯音乐 电音",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "86",
@@ -166,7 +162,7 @@
 		        "img_url": "http://oiq8j9er1.bkt.clouddn.com/music_Summertime%20.jpg",
 		        "url": "http://oiq8j9er1.bkt.clouddn.com/K-391%20-%20Summertime.mp3",
 		        "type": "纯音乐 电音",
-		    	"lyric": ""
+		    	  "lyric": ""
 		    },
 		    {
 		        "id": "85",
@@ -844,7 +840,7 @@
 		        "lyric": ""
 		    }
     	],
-		"sheets":[
+		  "sheets":[
 			{
 				"name": "我创建的歌单",
 				"count": "5",

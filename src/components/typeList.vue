@@ -4,7 +4,7 @@
     <div class="list-wrapper">
       <div class="type">
         <span>{{name}}</span>
-        <span class="typeCount">({{count}})</span>
+        <span class="typeCount" v-show="isCount">({{count}})</span>
       </div>
       <i class="icon-Horn red horn"></i>
     </div>
@@ -23,6 +23,11 @@
       },
       count: {
         type: String
+      }
+    },
+    computed: {
+      isCount () {
+        return this.count.length
       }
     }
   }

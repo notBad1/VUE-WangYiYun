@@ -3,13 +3,13 @@
     <!--头部-->
     <tobBar></tobBar>
     <!--侧边栏-->
-    <leftSidebar v-bind:info='info'></leftSidebar>
+    <leftSidebar></leftSidebar>
     <!--我的音乐-->
     <myMusic></myMusic>
     <!--底部-->
     <bootomBar></bootomBar>
     <!--底部菜单-->
-    <bottomMenu></bottomMenu>
+    <bottomMenu v-bind:bttomMenus='bttomMenus'></bottomMenu>
   </div>
 </template>
 
@@ -27,11 +27,20 @@
   export default {
     data () {
       return {
-        info: {
-          srcBg: '../../static/img/003.jpg',
-          src: '../../static/img/005.jpeg',
-          name: '各种纠结',
-          grade: '2'
+        bttomMenus: {
+          title: '创建的歌单',
+          content: [
+            {
+              name: '创建新歌单',
+              icon: 'icon-Add1',
+              count: ''
+            },
+            {
+              name: '歌单管理',
+              icon: 'icon-SongSheet',
+              count: ''
+            }
+          ]
         }
       }
     },

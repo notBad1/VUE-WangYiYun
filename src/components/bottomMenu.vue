@@ -2,9 +2,8 @@
     <div class="bottomMenu">
       <transition  name="sideUp">
         <div class="bottomMenu-box" v-show="isShowBottomMenus">
-          <p class="bottomMenu-title">创建的歌单</p>
-          <typeList name="创建新的歌单" icon="icon-Add1"></typeList>
-          <typeList name="歌单管理" icon="icon-SongSheet"></typeList>
+          <p class="bottomMenu-title">{{bttomMenus.title}}</p>
+          <typeList v-for="item in bttomMenus.content" v-bind:name='item.name' v-bind:icon='item.icon' v-bind:count='item.count'></typeList>
         </div>
       </transition>
 
@@ -23,6 +22,11 @@
 //          showMenu: true
 //        }
 //      },
+      props: {
+        bttomMenus: {
+          type: Object
+        }
+      },
       components: {
         'typeList': typeList
       },
@@ -54,10 +58,19 @@
     background-color: #fff;
     z-index: 80;
     padding-bottom: 10px;
+    /*过渡*/
+    transform:translate3d(0,0,0)
   }
   .bottomMenu-title{
     padding: 10px;
     font-size: 14px;
     color: #616161;
+  }
+  /*滑动效果*/
+  .bottomMenu-box.sideUp-enter-to, .bottomMenu-box.sideUp-leave-to{
+    transition: all .3s
+  }
+  .bottomMenu-box.sideUp-enter, .bottomMenu-box.sideUp-leave-to{
+    transform:translate3d(0,100%,0)
   }
 </style>
