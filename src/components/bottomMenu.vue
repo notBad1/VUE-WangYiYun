@@ -3,7 +3,7 @@
       <transition  name="sideUp">
         <div class="bottomMenu-box" v-show="isShowBottomMenus">
           <p class="bottomMenu-title">{{bttomMenus.title}}</p>
-          <typeList v-for="item in bttomMenus.content" v-bind:name='item.name' v-bind:icon='item.icon' v-bind:count='item.count'></typeList>
+          <typeList v-for="item in bttomMenus.content" key='item.id' v-bind:name='item.name' v-bind:icon='item.icon' v-bind:count='item.count'></typeList>
         </div>
       </transition>
 
@@ -17,11 +17,6 @@
     import store from '../store'
 
     export default {
-//      data () {
-//        return {
-//          showMenu: true
-//        }
-//      },
       props: {
         bttomMenus: {
           type: Object

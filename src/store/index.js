@@ -8,6 +8,7 @@ import Vuex from 'vuex'
 import Sidebar from './modules/sideBar'
 import BottomMenu from './modules/bottomMenus'
 import User from './modules/user'
+import SongSheet from './modules/songSheet'
 
 Vue.use(Vuex)
 
@@ -15,7 +16,8 @@ const store = new Vuex.Store({
   modules: {
     sideBar: Sidebar,
     bottomMenu: BottomMenu,
-    user: User
+    user: User,
+    songSheet: SongSheet
   }
 })
 

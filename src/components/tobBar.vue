@@ -3,12 +3,19 @@
       <div class="tobBar-warpper flex">
         <i class="icon-List3 white" v-on:click="showMueu"></i>
         <div class="centerMenu">
-          <i class="icon-Music white"></i>
-          <i class="icon-Wangyiyun paleRed"></i>
-          <i class="icon-Me2 paleRed"></i>
+          <router-link to="/myMusic">
+            <i class="icon-Music"></i>
+          </router-link>
+          <router-link to="/recommend">
+            <i class="icon-Wangyiyun"></i>
+          </router-link>
+          <router-link to="/topic">
+            <i class="icon-Me2"></i>
+          </router-link>
         </div>
         <i class="icon-Search white"></i>
       </div>
+      <router-view></router-view>
     </div>
 </template>
 <script>
@@ -35,14 +42,21 @@
     right: 0;
     height: 50px;
     background-color: #D33A31;
-    padding: 0 15px;
     z-index: 10;
   }
   .tobBar-warpper{
     height: 100%;
+    padding: 0 15px;
     justify-content: space-between;
   }
   .centerMenu i{
     padding: 0 10px;
+    color: #E58983;
+  }
+  .centerMenu a{
+    text-decoration: none;
+  }
+  .router-link-active>i{
+    color: #fff;
   }
 </style>

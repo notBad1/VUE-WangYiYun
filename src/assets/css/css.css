@@ -1,25 +1,27 @@
 [class^="icon-"], [class*=" icon-"] {
   font-size: 26px;
 }
-.white{
+
+.white {
   color: #fff;
 }
-.paleRed{
-  color: #E58983;
-}
-.red{
+
+.red {
   color: #D33A31;
 }
-.flex{
+
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.flex1{
+
+.flex1 {
   flex: 1;
 }
+
 /*列表*/
-.list-wrapper{
+.list-wrapper {
   flex: 1;
   display: flex;
   justify-content: space-between;
@@ -27,22 +29,23 @@
   height: 100%;
   border-bottom: 1px solid #DADCDD;
 }
+
 /*遮罩层*/
-.mask{
+.mask {
   position: fixed;
-  top:0;
+  top: 0;
   bottom: 0;
-  left:0;
+  left: 0;
   right: 0;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, .3);
   z-index: 50;
 }
-
 
 /*动画效果*/
 .fade-enter-active, .fade-leave-active {
   transition: all .5s
 }
+
 .fade-enter, .fade-leave-to {
   opacity: 0
 }

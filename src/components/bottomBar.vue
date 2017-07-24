@@ -47,7 +47,6 @@
     left: 0;
     right:0;
     height: 50px;
-    margin-top: 50px;
     background-color: #fff;
     padding: 0 15px 0 5px;
     justify-content: space-around;
