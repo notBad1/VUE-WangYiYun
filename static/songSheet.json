@@ -5,8 +5,24 @@
       "count": "1",
       "detail": [
         {
+          "id": "0",
+          "songSheetImg": "../../static/img/003.jpg",
+          "name": "我喜欢的音乐1",
+          "count": "0",
+          "type": "歌单类型"
+        }
+      ]
+    },
+    {
+      "name": "收藏的歌单",
+      "count": "1",
+      "detail": [
+        {
+          "id": "0",
+          "songSheetImg": "../../static/img/003.jpg",
           "name": "我喜欢的音乐",
-          "count": ""
+          "count": "0",
+          "type": "歌单类型"
         }
       ]
     }

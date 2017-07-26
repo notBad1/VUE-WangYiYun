@@ -19,7 +19,7 @@ const songSheet = {
     },
     // 删除歌单
     deleteSongSheet (state, songSheet) {
-      state.songSheets.splice(state.songSheets.indexOf(songSheet),1)
+      state.songSheets.splice(state.songSheets.indexOf(songSheet), 1)
     }
   },
   actions: {

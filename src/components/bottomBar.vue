@@ -7,34 +7,36 @@
         <span class="prompt">横滑可以切换上下首哦</span>
       </div>
       <i class="icon-Play3 play"></i>
-      <i class="icon-PlayList" v-on:click="toggleSong"></i>
+      <i class="icon-PlayList" @click="showSong"></i>
       <!--遮罩层-->
       <transition name="fade">
-        <div v-show="showSong" class="mask" v-on:click = "hiddenSong"></div>
+        <div v-show="isShowSong" class="mask" @click = "hiddenSong"></div>
       </transition>
       <!--歌曲列表-->
-      <Song v-show="showSong" ></Song>
+      <Song v-show="isShowSong"></Song>
     </div>
 </template>
 <script>
     import Song from './song.vue'
+    import store from '../store'
 
     export default {
-      data () {
-        return {
-          showSong: false
-        }
-      },
       methods: {
-        toggleSong () {
-          this.showSong = !this.showSong
+        showSong () {
+          store.dispatch('showSongList')
         },
         hiddenSong () {
-          this.showSong = false
+          store.dispatch('hideSongList')
         }
       },
       components: {
         'Song': Song
+      },
+      computed: {
+        // 显示
+        isShowSong () {
+          return store.state.songList.isShowSongList
+        }
       }
     }
 </script>
@@ -50,7 +52,7 @@
     background-color: #fff;
     padding: 0 15px 0 5px;
     justify-content: space-around;
-    z-index: 1;
+    z-index: 10;
   }
   .musicImg{
     width:40px;

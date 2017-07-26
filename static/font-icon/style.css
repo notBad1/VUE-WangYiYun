@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?tn080u');
-  src:  url('fonts/icomoon.eot?tn080u#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?tn080u') format('truetype'),
-    url('fonts/icomoon.woff?tn080u') format('woff'),
-    url('fonts/icomoon.svg?tn080u#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?18qfjd');
+  src:  url('fonts/icomoon.eot?18qfjd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?18qfjd') format('truetype'),
+    url('fonts/icomoon.woff?18qfjd') format('woff'),
+    url('fonts/icomoon.svg?18qfjd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-MV:before {
+  content: "\e915";
+}
+.icon-Play4:before {
+  content: "\e916";
+}
+.icon-Multiselect:before {
+  content: "\e918";
+}
+.icon-Correct:before {
+  content: "\e933";
+}
 .icon-Add2:before {
   content: "\e914";
   color: #515151;

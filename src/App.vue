@@ -7,7 +7,7 @@
     <!--底部-->
     <bootomBar></bootomBar>
     <!--底部菜单-->
-    <bottomMenu v-bind:bttomMenus='bttomMenus'></bottomMenu>
+    <bottomMenu></bottomMenu>
   </div>
 </template>
 
@@ -25,30 +25,10 @@
   // 底部菜单
   import bottomMenu from './components/bottomMenu.vue'
 
-  Vue.use(axios)
+//  Vue.use(axios)
+  Vue.prototype.$http = axios
 
   export default {
-    data () {
-      return {
-        bttomMenus: {
-          title: '创建的歌单',
-          content: [
-            {
-              id: '0',
-              name: '创建新歌单',
-              icon: 'icon-Add1',
-              count: ''
-            },
-            {
-              id: '1',
-              name: '歌单管理',
-              icon: 'icon-SongSheet',
-              count: ''
-            }
-          ]
-        }
-      }
-    },
     components: {
       'tobBar': tobBar,
       'bootomBar': bootomBar,
