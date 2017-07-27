@@ -1,16 +1,15 @@
 <template>
     <div class="mymusic">
-        <router-link to="/musicDetail">
+        <router-link to="/typeDetail">
             <typeList name="本地音乐" icon="icon-Music" count="5"></typeList>
         </router-link>
+
         <typeList name="最近播放" icon="icon-RecentlyPlayed" count="5"></typeList>
         <typeList name="下载管理" icon="icon-Download" count="5"></typeList>
         <typeList name="我的电台" icon="icon-MusicRadio" count="5"></typeList>
         <typeList name="我的收藏" icon="icon-Collection" count="专辑/歌手/MV/专栏"></typeList>
 
         <songSheet v-for='(item, index) in items' :typeList='item' :songSheetList="item.detail" :key='index'></songSheet>
-
-        <router-view></router-view>
     </div>
 </template>
 <script>

@@ -10,6 +10,7 @@ import BottomMenu from './modules/bottomMenus'
 import User from './modules/user'
 import SongSheet from './modules/songSheet'
 import SongList from './modules/songList'
+import Audio from './modules/audio'
 
 Vue.use(Vuex)
 
@@ -19,7 +20,8 @@ const store = new Vuex.Store({
     bottomMenu: BottomMenu,
     user: User,
     songSheet: SongSheet,
-    songList: SongList
+    songList: SongList,
+    audio: Audio
   }
 })
 

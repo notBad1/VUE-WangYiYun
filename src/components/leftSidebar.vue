@@ -124,7 +124,7 @@
     width: 286px;
     height: 100%;
     background-color: #fff;
-    z-index: 100;
+    z-index: 220;
     overflow-y: auto;
   }
 
