@@ -51,7 +51,6 @@
       let localMusicUrl = 'static/localMusic.json'
       axios.get(localMusicUrl)
         .then(function (response) {
-          console.log(response.data.localMusic)
           store.dispatch('init_LocalMusic', response.data.localMusic)
         })
         .catch(function (error) {
