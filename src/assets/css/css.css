@@ -29,7 +29,20 @@
   height: 100%;
   border-bottom: 1px solid #DADCDD;
 }
-
+.icon-List2.list-icon{
+  height:60px;
+  line-height: 60px;
+  padding: 0 15px;
+  color: #AAABAC;
+  font-size: 22px;
+}
+.icon-List2.list-icon:hover{
+  background-color: #BFC0C1;
+}
+.count{
+  font-size: 12px;
+  color: #797A7B;
+}
 /*遮罩层*/
 .mask {
   position: fixed;

@@ -1,24 +1,38 @@
 <template>
+  <!--音乐列表-->
     <div class="musicList flex">
-      <i class="icon-Horn red musicList-horn"></i>
-      <div class="musicList-detail">
+      <i v-show="showHorn" class="icon-Horn musicList-horn"></i>
+      <div class="musicList-detail" v-bind:id="item.id">
         <div class="musicList-songname">
-          <p>{{item.name}}<span>(电视剧《春风十里，不如你》)</span></p>
-          <i class="icon-MV musicList-mv"></i>
+          <p>{{item.name}}<span v-show="showAlias">({{item.alias}})</span></p>
+          <i v-show="showMv" class="icon-MV musicList-mv"></i>
         </div>
         <p class="musicList-songster">
           <i class="icon-Correct musicList-correct"></i>
-          <span>{{item.singer}} - 如果我爱你</span>
+          <span>{{item.singer}} - {{item.album}}</span>
         </p>
       </div>
-      <i class="icon-List2 musicList-icon"></i>
+      <i class="icon-List2 list-icon"></i>
     </div>
 </template>
 <script>
   export default {
+    data () {
+      return {
+        showHorn: false
+      }
+    },
     props: {
       item: {
         type: Object
+      }
+    },
+    computed: {
+      showMv () {
+        return this.item.mv === '0' ? 0 : 1
+      },
+      showAlias () {
+        return this.item.alias === 'undefined' ? 0 : 1
       }
     }
   }
@@ -33,19 +47,12 @@
   }
   .musicList-horn{
     font-size: 20px;
+    color: #D33A31;
+    margin-right: 10px;
   }
   .musicList-detail{
     flex: 1;
     text-align: left;
-    margin-left: 10px;
-
-  }
-  .musicList-icon{
-    height:60px;
-    line-height: 60px;
-    padding: 0 15px;
-    color: #AAABAC;
-    font-size: 22px;
   }
 
   .musicList-songname{
@@ -56,13 +63,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 15px;
   }
   .musicList-songname span{
     color: #919293;
     margin-left: 5px;
   }
   .musicList-mv{
-    margin-left: 5px;
+    margin-left: 2px;
+    color: #D33A31;
   }
 
   .musicList-songster{

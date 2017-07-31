@@ -13,10 +13,10 @@
           <img class="sheetImg" :src="songSheet.songSheetImg" alt="">
           <div class="list-wrapper">
             <div class="flex1">
-              <span ref = "songSheetName" class="name">{{songSheet.name}}</span>
+              <p ref = "songSheetName" >{{songSheet.name}}</p>
               <span class="count">{{songSheet.count}}首</span>
             </div>
-            <i class="icon-List2 sheetoption" @click.stop="toggleSetSheet"></i>
+            <i class="icon-List2 list-icon" @click.stop="toggleSetSheet"></i>
           </div>
         </div>
       </div>
@@ -95,21 +95,5 @@
     width:50px;
     height: 50px;
     padding: 0 10px;
-  }
-  .count{
-    display: block;
-    font-size: 12px;
-    color: #797A7B;
-    margin-top: 5px;
-  }
-  .sheetoption{
-    font-size: 16px;
-    color: #AAABAC;
-    padding: 0 15px;
-    height:60px;
-    line-height: 60px;
-  }
-  .sheetoption:hover{
-    background-color: #BFC0C1;
   }
 </style>

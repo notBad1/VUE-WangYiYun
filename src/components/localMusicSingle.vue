@@ -1,4 +1,5 @@
 <template>
+  <!--本地音乐-->
   <div class="localMusicSingle">
     <div class="single-header flex">
       <i class="icon-Play4 single-playAll"></i>
@@ -34,7 +35,6 @@
     position: fixed;
     top: 90px;
     bottom: 50px;
-    border-bottom: 50px;
     left: 0;
     right: 0;
     overflow: auto;
