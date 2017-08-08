@@ -11,6 +11,8 @@ import User from './modules/user'
 import SongSheet from './modules/songSheet'
 import SongList from './modules/songList'
 import Audio from './modules/audio'
+// 推荐页面状态
+import Recommend from './modules/recommend'
 
 Vue.use(Vuex)
 
@@ -21,7 +23,8 @@ const store = new Vuex.Store({
     user: User,
     songSheet: SongSheet,
     songList: SongList,
-    audio: Audio
+    audio: Audio,
+    recommend: Recommend
   }
 })
 
