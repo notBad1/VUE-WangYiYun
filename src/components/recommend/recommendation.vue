@@ -3,7 +3,7 @@
     <!--个性推荐-->
     <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide v-for="(banner, index) in banners" v-bind:key="index" >
+      <swiper-slide v-for="(banner, index) in banners" v-bind:key="index">
         <a v-bind:href="banner.url"><img v-bind:src="banner.pic" alt="banner.typeTitle"></a>
       </swiper-slide>
       <!-- Optional controls -->
@@ -25,7 +25,15 @@
       </li>
     </ul>
 
-    <recommendList title="推荐歌单" v-bind:items='recommendSongSheets'></recommendList>
+    <recommendList title="推荐歌单" v-bind:items='recommendSongSheet' ></recommendList>
+    <recommendList title="独家放送" v-bind:items='recommendSole' ></recommendList>
+    <recommendList1 title="推荐MV" v-bind:items='recommendMv' ></recommendList1>
+
+    <!--底部-->
+    <div class="recommend-foot">
+      <p>现在可以根据个人喜好，自由调整栏目顺序啦～</p>
+      <a href="#">调整栏目顺序</a>
+    </div>
   </div>
 </template>
 <script>
@@ -35,6 +43,7 @@
   Vue.prototype.$http = axios
 
   import recommendList from './recommendList.vue'
+  import recommendList1 from './recommendList1.vue'
 
   export default {
     name: 'carrousel',
@@ -51,19 +60,22 @@
           grabCursor: true,
           setWrapperSize: true,
           pagination: '.swiper-pagination',
-//          mousewheelControl: true,
+          mousewheelControl: true,
 //          循环
           loop: true
         },
 //        广告图片
         banners: [],
-        recommendSongSheets: []
+        recommendSongSheet: [],
+        recommendSole: [],
+        recommendMv: []
       }
     },
     components: {
       swiper,
       swiperSlide,
-      recommendList: recommendList
+      recommendList: recommendList,
+      recommendList1: recommendList1
     },
     // 如果你需要得到当前的swiper对象来做一些事情，
     // 你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
@@ -85,21 +97,40 @@
           self.banners = res.data.banners
         })
       },
+//      获取推荐歌单
       fetchRecommendSongSheet () {
         let self = this
         axios.get('/api/personalized').then(function (res) {
-          self.recommendSongSheets = res.data.result
+          self.recommendSongSheet = res.data.result
+          console.log(self.recommendSongSheet = res.data.result)
+        })
+      },
+//      获取独家放送
+      fetchRecommendSole () {
+        let self = this
+        axios.get('/api/personalized/privatecontent').then(function (res) {
+          self.recommendSole = res.data.result
+        })
+      },
+//      获取推荐mv
+      fetchRecommendMv () {
+        let self = this
+        axios.get('/api/personalized/mv').then(function (res) {
+          self.recommendMv = res.data.result
         })
       }
     },
     created () {
       this.fetchBanner()
       this.fetchRecommendSongSheet()
+      this.fetchRecommendSole()
+      this.fetchRecommendMv()
     }
   }
 </script>
 <style>
   @import "../../assets/css/css.css";
+
   .swiper-container {
     position: relative;
     overflow: hidden;
@@ -127,7 +158,7 @@
     z-index: 10;
   }
 
-  .swiper-container-horizontal > .swiper-pagination-bullets{
+  .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 10px;
     left: 0;
     width: 100%;
@@ -142,30 +173,54 @@
     opacity: .1;
     margin: 0 5px;
   }
+
   .swiper-pagination-bullet-active {
     opacity: 1;
-    background:  #D33A31;
-  }
-  .swiper-slide{
-    height:100%;
-  }
-  .swiper-slide img{
-    width:100%;
-    height:100%;
+    background: #D33A31;
   }
 
-  .recommend-list{
-    width:100%;
+  .swiper-slide {
+    height: 100%;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .recommend-list {
+    width: 100%;
     display: flex;
     padding: 10px 0;
     border-bottom: 1px solid #DADCDD;
     font-size: 12px;
   }
-  .recommend-list li{
+
+  .recommend-list li {
     flex: 1;
     text-align: center;
   }
-  .recommend-list li img{
+
+  .recommend-list li img {
     width: 50%;
   }
+  .recommend-foot{
+    margin-top: 30px;
+    padding: 25px 0;
+    border-top: 1px solid #DADCDD;
+    text-align: center;
+    color: #797A7B;
+    font-size: 12px;
+  }
+  .recommend-foot p{
+    margin-bottom: 22px;
+  }
+  .recommend-foot a{
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: 1px solid #D33A31;
+    border-radius: 16px;
+    color:  #D33A31;
+  }
+
 </style>
