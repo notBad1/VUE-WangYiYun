@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?18qfjd');
-  src:  url('fonts/icomoon.eot?18qfjd#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?18qfjd') format('truetype'),
-    url('fonts/icomoon.woff?18qfjd') format('woff'),
-    url('fonts/icomoon.svg?18qfjd#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?puxdcs');
+  src:  url('fonts/icomoon.eot?puxdcs#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?puxdcs') format('truetype'),
+    url('fonts/icomoon.woff?puxdcs') format('woff'),
+    url('fonts/icomoon.svg?puxdcs#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,174 +24,183 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Wenzhang:before {
+  content: "\e93a";
+}
+.icon-Video:before {
+  content: "\e939";
+}
+.icon-Headset:before {
+  content: "\e900";
+}
+.icon-List2:before {
+  content: "\e901";
+}
 .icon-MV:before {
-  content: "\e915";
+  content: "\e902";
 }
 .icon-Play4:before {
-  content: "\e916";
+  content: "\e903";
 }
 .icon-Multiselect:before {
-  content: "\e918";
+  content: "\e904";
 }
 .icon-Correct:before {
-  content: "\e933";
+  content: "\e905";
 }
 .icon-Add2:before {
-  content: "\e914";
+  content: "\e906";
   color: #515151;
 }
 .icon-SignOut:before {
-  content: "\e913";
-}
-.icon-Online:before {
-  content: "\e900";
-}
-.icon-Drive:before {
-  content: "\e917";
-}
-.icon-Cloud:before {
-  content: "\e936";
-}
-.icon-Clock:before {
-  content: "\e93e";
-}
-.icon-Add1:before {
-  content: "\e930";
-}
-.icon-SongSheet:before {
-  content: "\e931";
-}
-.icon-Delete1:before {
-  content: "\e932";
-}
-.icon-Link:before {
-  content: "\e934";
-}
-.icon-Delete2:before {
-  content: "\e935";
-}
-.icon-PlayList:before {
-  content: "\e926";
-}
-.icon-Play3:before {
-  content: "\e92f";
-}
-.icon-DownArrow:before {
-  content: "\e92d";
-}
-.icon-RightArrow:before {
-  content: "\e92e";
-}
-.icon-Collection:before {
-  content: "\e929";
-}
-.icon-MusicRadio:before {
-  content: "\e92a";
-}
-.icon-Download:before {
-  content: "\e92b";
-}
-.icon-RecentlyPlayed:before {
-  content: "\e92c";
-}
-.icon-Search:before {
-  content: "\e928";
-}
-.icon-Music:before {
-  content: "\e90f";
-}
-.icon-Member:before {
-  content: "\e901";
-}
-.icon-Set:before {
-  content: "\e919";
-}
-.icon-NightMode:before {
-  content: "\e91a";
-}
-.icon-Timing:before {
-  content: "\e91b";
-}
-.icon-Sign:before {
-  content: "\e91c";
-}
-.icon-Play:before {
-  content: "\e91d";
-}
-.icon-Message1:before {
-  content: "\e91e";
-}
-.icon-NextSong:before {
-  content: "\e91f";
-}
-.icon-PrevSong:before {
-  content: "\e920";
-}
-.icon-Message2:before {
-  content: "\e902";
-}
-.icon-EmptyLove:before {
-  content: "\e921";
-  color: #515151;
-}
-.icon-ShazamEncore:before {
-  content: "\e922";
-}
-.icon-realLove:before {
-  content: "\e923";
-  color: #d22f33;
-}
-.icon-Skin:before {
-  content: "\e924";
-}
-.icon-Descending:before {
-  content: "\e925";
-}
-.icon-Me1:before {
-  content: "\e927";
-}
-.icon-Me2:before {
-  content: "\e905";
-}
-.icon-List2:before {
-  content: "\e904";
-}
-.icon-Horn:before {
-  content: "\e903";
-}
-.icon-List3:before {
-  content: "\e90b";
-}
-.icon-Love1:before {
-  content: "\e90c";
-}
-.icon-Random:before {
-  content: "\e90a";
-}
-.icon-Loop1:before {
-  content: "\e90d";
-}
-.icon-Share:before {
-  content: "\e90e";
-}
-.icon-Nearby:before {
-  content: "\e912";
-}
-.icon-ShoppingCart:before {
-  content: "\e906";
-}
-.icon-Loop2:before {
   content: "\e907";
 }
-.icon-Wangyiyun:before {
+.icon-Online:before {
   content: "\e908";
 }
-.icon-Play2:before {
+.icon-Drive:before {
   content: "\e909";
 }
-.icon-Message3:before {
+.icon-Cloud:before {
+  content: "\e90a";
+}
+.icon-Clock:before {
+  content: "\e90b";
+}
+.icon-Delete2:before {
+  content: "\e90c";
+}
+.icon-Link:before {
+  content: "\e90d";
+}
+.icon-Delete1:before {
+  content: "\e90e";
+}
+.icon-SongSheet:before {
+  content: "\e90f";
+}
+.icon-Add1:before {
   content: "\e910";
 }
-.icon-Return:before {
+.icon-PlayList:before {
   content: "\e911";
+}
+.icon-Play3:before {
+  content: "\e912";
+}
+.icon-DownArrow:before {
+  content: "\e913";
+}
+.icon-RightArrow:before {
+  content: "\e914";
+}
+.icon-Collection:before {
+  content: "\e915";
+}
+.icon-MusicRadio:before {
+  content: "\e916";
+}
+.icon-Download:before {
+  content: "\e917";
+}
+.icon-RecentlyPlayed:before {
+  content: "\e918";
+}
+.icon-Music:before {
+  content: "\e919";
+}
+.icon-Search:before {
+  content: "\e91a";
+}
+.icon-Member:before {
+  content: "\e91b";
+}
+.icon-Set:before {
+  content: "\e91c";
+}
+.icon-NightMode:before {
+  content: "\e91d";
+}
+.icon-Timing:before {
+  content: "\e91e";
+}
+.icon-Sign:before {
+  content: "\e91f";
+}
+.icon-Play:before {
+  content: "\e920";
+}
+.icon-Message1:before {
+  content: "\e921";
+}
+.icon-NextSong:before {
+  content: "\e922";
+}
+.icon-PrevSong:before {
+  content: "\e923";
+}
+.icon-Message2:before {
+  content: "\e924";
+}
+.icon-EmptyLove:before {
+  content: "\e925";
+  color: #515151;
+}
+.icon-realLove:before {
+  content: "\e926";
+  color: #d22f33;
+}
+.icon-ShazamEncore:before {
+  content: "\e927";
+}
+.icon-Skin:before {
+  content: "\e928";
+}
+.icon-Descending:before {
+  content: "\e929";
+}
+.icon-Me1:before {
+  content: "\e92a";
+}
+.icon-Me2:before {
+  content: "\e92b";
+}
+.icon-Love1:before {
+  content: "\e92c";
+}
+.icon-Horn:before {
+  content: "\e92d";
+}
+.icon-List3:before {
+  content: "\e92e";
+}
+.icon-Random:before {
+  content: "\e92f";
+}
+.icon-Loop1:before {
+  content: "\e930";
+}
+.icon-Wangyiyun:before {
+  content: "\e931";
+}
+.icon-Loop2:before {
+  content: "\e932";
+}
+.icon-Return:before {
+  content: "\e933";
+}
+.icon-Share:before {
+  content: "\e934";
+}
+.icon-Play2:before {
+  content: "\e935";
+}
+.icon-ShoppingCart:before {
+  content: "\e936";
+}
+.icon-Nearby:before {
+  content: "\e937";
+}
+.icon-Message3:before {
+  content: "\e938";
 }

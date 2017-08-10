@@ -28,6 +28,7 @@
     <recommendList title="推荐歌单" v-bind:items='recommendSongSheet' ></recommendList>
     <recommendList title="独家放送" v-bind:items='recommendSole' ></recommendList>
     <recommendList1 title="推荐MV" v-bind:items='recommendMv' ></recommendList1>
+    <recommendList title="主播电台" v-bind:items='recommendRadioAnchor'></recommendList>
 
     <!--底部-->
     <div class="recommend-foot">
@@ -68,7 +69,8 @@
         banners: [],
         recommendSongSheet: [],
         recommendSole: [],
-        recommendMv: []
+        recommendMv: [],
+        recommendRadioAnchor: []
       }
     },
     components: {
@@ -102,13 +104,13 @@
         let self = this
         axios.get('/api/personalized').then(function (res) {
           self.recommendSongSheet = res.data.result
-          console.log(self.recommendSongSheet = res.data.result)
         })
       },
 //      获取独家放送
       fetchRecommendSole () {
         let self = this
         axios.get('/api/personalized/privatecontent').then(function (res) {
+          console.log(res.data.result)
           self.recommendSole = res.data.result
         })
       },
@@ -118,6 +120,13 @@
         axios.get('/api/personalized/mv').then(function (res) {
           self.recommendMv = res.data.result
         })
+      },
+//      获取电台主播
+      fetchRecommendRadioAnchor () {
+        let self = this
+        axios.get('/api/personalized/djprogram').then(function (res) {
+          self.recommendRadioAnchor = res.data.result
+        })
       }
     },
     created () {
@@ -125,6 +134,7 @@
       this.fetchRecommendSongSheet()
       this.fetchRecommendSole()
       this.fetchRecommendMv()
+      this.fetchRecommendRadioAnchor()
     }
   }
 </script>
