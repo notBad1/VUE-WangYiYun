@@ -9,6 +9,12 @@
         <img v-bind:src="item.picUrl" >
         <p>{{item.name}}</p>
         <span>{{item.artistName}}</span>
+
+        <div class="recommendList-playCount" v-if="item.playCount">
+          <i class="icon-Video recommendList-headset"></i>
+          <span>{{ item.playCount | playCountFilter }}</span>
+        </div>
+
       </li>
     </ul>
   </div>
@@ -22,12 +28,23 @@
       items: {
         type: Array
       }
+    },
+    filters: {
+      playCountFilter: function (num) {
+        let count = parseInt(num).toString()
+        if (count.length < 6) {
+          return count
+        } else {
+          let a = count.length - 4
+          return count.slice(0, a) + '万'
+        }
+      }
     }
   }
 </script>
 <style>
   .recommendList1-content li{
-    width: 49.8%;
+    width: 49.7%;
   }
 
   .recommendList1-content li p{
@@ -36,9 +53,12 @@
     text-overflow:ellipsis;
     white-space: nowrap;
   }
-  .recommendList1-content li span{
+  .recommendList1-content li>span{
     margin: 0 5px;
     font-size: 11px;
     color: #797A7B;
+  }
+  .recommendList1-content .recommendList-headset{
+    margin-right: 3px;
   }
 </style>

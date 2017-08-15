@@ -5,22 +5,28 @@
       <i class="icon-RightArrow recommendList-arrow"></i>
     </div>
     <ul class="recommendList-content" v-bind:class="{ 'recommendList-content-s': show }">
-      <li v-for="(item,index) in items" v-bind:key="index">
+      <li v-for="(item,i) in items" v-bind:key="i">
         <img v-bind:src="item.picUrl">
         <p>{{item.name}}</p>
-        <div class="recommendList-playCount" v-show="showPlayCount">
+
+        <div class="recommendList-playCount" v-if="item.playCount">
           <i class="icon-Headset recommendList-headset"></i>
-          <span>{{ playCounts( item.playCount ) }}万</span>
+          <span>{{ item.playCount | playCountFilter }}万</span>
         </div>
-        <div class="recommendList-cir" v-show="showVideo">
+
+        <div class="recommendList-cir" v-if="item.type === 24">
           <i class="icon-Video"></i>
         </div>
-        <div class="recommendList-cir" v-show="showLink">
+        <div class="recommendList-cir" v-else-if="item.type === 19">
           <i class="icon-Link"></i>
         </div>
-        <div class="recommendList-cir" v-show="showWenzhang">
+        <div class="recommendList-cir" v-else-if="item.type === 6">
           <i class="icon-Wenzhang"></i>
         </div>
+        <div class="recommendList-cir-none" v-else>
+        </div>
+
+
       </li>
     </ul>
   </div>
@@ -37,11 +43,7 @@
     },
     data () {
       return {
-        isShow: false,
-        isShowPlayCount: false,
-        isShowVideo: false,
-        isShowLink: false,
-        isShowWenzhang: false
+        isShow: false
       }
     },
     computed: {
@@ -49,43 +51,15 @@
         let n = 3
         this.isShow = n === this.items.length ? 1 : 0
         return this.isShow
-      },
-      showPlayCount () {
-        let self = this
-        self.items.map(function (n, i) {
-          self.isShowPlayCount = n.playCount ? 1 : 0
-        })
-        return self.isShowPlayCount
-      },
-      showVideo () {
-        let self = this
-        self.items.map(function (n, i) {
-          self.isShowVideo = n.type === 24 ? 1 : 0
-        })
-        return self.isShowVideo
-      },
-      showLink () {
-        let self = this
-        self.items.map(function (n, i) {
-          self.isShowLink = n.type === 19 ? 1 : 0
-        })
-        return self.isShowLink
-      },
-      showWenzhang () {
-        let self = this
-        self.items.map(function (n, i) {
-          self.isShowWenzhang = n.type === 6 ? 1 : 0
-        })
-        return self.isShowWenzhang
       }
     },
     methods: {
-      playCounts (num) {
-        if (num) {
-          let count = parseInt(num).toString()
-          let a = count.length - 4
-          return count.slice(0, a)
-        }
+    },
+    filters: {
+      playCountFilter: function (num) {
+        let count = parseInt(num).toString()
+        let a = count.length - 4
+        return count.slice(0, a)
       }
     }
   }
@@ -127,7 +101,7 @@
   }
 
   .recommendList-content-s li {
-    width: 49.8%;
+    width: 49.7%;
   }
 
   .recommendList-content-s li:last-child {
@@ -159,5 +133,27 @@
     color: #ffffff;
     display: flex;
     align-items: center;
+  }
+
+  .recommendList-cir{
+    position: absolute;
+    left:5px;
+    top:5px;
+    width:20px;
+    height: 20px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .recommendList-cir i{
+    color: #fff;
+    font-size: 13px;
+  }
+  .recommendList-cir-none{
+    display: none;
   }
 </style>

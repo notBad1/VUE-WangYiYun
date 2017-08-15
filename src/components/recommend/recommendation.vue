@@ -47,7 +47,6 @@
   import recommendList1 from './recommendList1.vue'
 
   export default {
-    name: 'carrousel',
     data () {
       return {
 //        滑块插件
@@ -110,7 +109,6 @@
       fetchRecommendSole () {
         let self = this
         axios.get('/api/personalized/privatecontent').then(function (res) {
-          console.log(res.data.result)
           self.recommendSole = res.data.result
         })
       },
